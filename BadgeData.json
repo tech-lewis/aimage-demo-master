@@ -1,0 +1,28 @@
+{
+  "data":[
+    {
+      "icon" : "Default",
+      "title" : "单肩包"
+    },
+    {
+      "icon" : "Default",
+      "title" : "链条包"
+    },
+    {
+      "icon" : "Default",
+      "title" : "钱包"
+    },
+    {
+      "icon" : "Default",
+      "title" : "手提包"
+    },
+    {
+      "icon" : "Default",
+      "title" : "双肩包"
+    },
+    {
+      "icon" : "Default",
+      "title" : "斜挎包"
+    }
+  ]
+}

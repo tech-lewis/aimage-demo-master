@@ -5,8 +5,9 @@
 
 import React, { Component } from 'react';
 import { StatusBarManager } from 'NativeModules';
-import Game2048 from "./2048/Game2048";
+// import Game2048 from "./2048/Game2048";
 import AppComponent from './lib/App';
+import MainApp from './lib/MainApp'
 import {
   AppRegistry,
   StyleSheet,
@@ -20,11 +21,19 @@ class AImageDemo extends Component {
   state = {
     switch: false,
   }
+
+  componentDidMount () {
+    setTimeout(() => {
+      this.setState({
+        switch: true
+      })
+    }, 1024);
+  }
   render() {
     return (
       <View style={styles.container}>
         {
-          this.state.switch ? <PieCountdown/> : <AppComponent />
+          this.state.switch ? <MainApp/> : <AppComponent />
         }
         <TouchableHighlight onPress = { () => { 
           const Dimensionsss = require('Dimensions')

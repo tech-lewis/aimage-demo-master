@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 import { StatusBarManager } from 'NativeModules';
-// import Game2048 from "./2048/Game2048";
+import Game2048 from "./2048/Game2048";
 import AppComponent from './lib/App';
 import MainApp from './lib/MainApp'
 import {
@@ -20,6 +20,7 @@ import PieCountdown  from "./lib//PieCountdown";
 class AImageDemo extends Component {
   state = {
     switch: false,
+    openGame: false
   }
 
   componentDidMount () {
@@ -33,7 +34,8 @@ class AImageDemo extends Component {
     return (
       <View style={styles.container}>
         {
-          this.state.switch ? <MainApp/> : <AppComponent />
+          this.state.openGame? <Game2048 /> :
+          this.state.switch ? <MainApp/> : <AppComponent backToGame = {()=>{ this.setState({ openGame: true })}}/>
         }
         <TouchableHighlight onPress = { () => { 
           const Dimensionsss = require('Dimensions')
